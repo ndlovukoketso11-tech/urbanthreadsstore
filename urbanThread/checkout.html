@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — Urban Threads</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <a class="logo" href="index.html">Urban Threads</a>
+
+    <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="hamburger" aria-hidden="true"></span>
+    </button>
+
+    <div id="nav-status" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+    <div id="auth-status" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="shop.html">Shop</a></li>
+      <li>
+        <a href="cart.html">
+          Cart <span id="cart-count" class="cart-badge">0</span>
+        </a>
+      </li>
+      <li id="auth-link"><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <h2>Checkout</h2>
+
+    <div id="checkout-message" role="alert" aria-live="polite"></div>
+
+    <div id="checkout-container" class="checkout-layout">
+      <section class="checkout-summary" aria-label="Order summary">
+        <h3>Order summary</h3>
+        <ul id="checkout-items"></ul>
+        <p id="checkout-total" class="checkout-total">Total: R0.00</p>
+      </section>
+
+      <form id="checkout-form" class="checkout-form" aria-label="Shipping details">
+        <h3>Shipping details</h3>
+        <label for="fullName">Full name <span class="required">*</span>
+          <input type="text" id="fullName" name="fullName" required placeholder="Your full name" autocomplete="name" />
+        </label>
+        <label for="address">Address <span class="required">*</span>
+          <input type="text" id="address" name="address" required placeholder="Street address" autocomplete="street-address" />
+        </label>
+        <label for="city">City <span class="required">*</span>
+          <input type="text" id="city" name="city" required placeholder="City" autocomplete="address-level2" />
+        </label>
+        <label for="postalCode">Postal code <span class="required">*</span>
+          <input type="text" id="postalCode" name="postalCode" required placeholder="Postal code" autocomplete="postal-code" />
+        </label>
+        <label for="phone">Phone (optional)
+          <input type="tel" id="phone" name="phone" placeholder="Phone number" autocomplete="tel" />
+        </label>
+        <button type="submit" id="placeOrderBtn" class="btn-place-order">Place order</button>
+      </form>
+    </div>
+
+    <p id="checkout-empty" class="checkout-empty" style="display: none;">Your cart is empty. <a href="shop.html">Continue shopping</a>.</p>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Urban Threads. All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="../src/ui/navbar.js"></script>
+  <script type="module" src="../src/ui/checkout.js"></script>
+  <script type="module" src="../src/ui/authState.js"></script>
+
+</body>
+</html>

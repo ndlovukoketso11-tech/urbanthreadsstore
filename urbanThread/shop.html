@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Threads</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <a class="logo" href="index.html">Urban Threads</a>
+
+    <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="hamburger" aria-hidden="true"></span>
+    </button>
+
+    <div id="nav-status" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+    <div id="auth-status" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="shop.html">Shop</a></li>
+      <li>
+        <a href="cart.html">
+          Cart <span id="cart-count" class="cart-badge">0</span>
+        </a>
+      </li>
+      <li id="auth-link"><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <h1>Urban Threads Shop</h1>
+
+    <div id="category-tabs" class="category-tabs" role="tablist" aria-label="Product categories">
+      <button class="category-btn active" data-cat="all" role="tab" aria-selected="true">All</button>
+      <button class="category-btn" data-cat="Hoodies" role="tab">Hoodies</button>
+      <button class="category-btn" data-cat="T-shirts" role="tab">T-shirts</button>
+      <button class="category-btn" data-cat="Sneakers" role="tab">Sneakers</button>
+      <button class="category-btn" data-cat="Accessories" role="tab">Accessories</button>
+      <button class="category-btn" data-cat="grouped" role="tab">Grouped</button>
+    </div>
+
+    <div id="productGrid" class="product-grid"></div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Urban Threads. All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="../src/ui/navbar.js"></script>
+  <script type="module" src="../src/ui/products.js"></script>
+  <script type="module" src="../src/ui/authState.js"></script>
+
+</body>
+</html>
+

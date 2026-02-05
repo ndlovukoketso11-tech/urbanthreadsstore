@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Threads</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <a class="logo" href="index.html">Urban Threads</a>
+
+    <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="hamburger" aria-hidden="true"></span>
+    </button>
+
+    <div id="nav-status" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+    <div id="auth-status" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="shop.html">Shop</a></li>
+      <li>
+        <a href="cart.html">
+          Cart <span id="cart-count" class="cart-badge">0</span>
+        </a>
+      </li>
+      <li id="auth-link"><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+
+  <main id="main-content">
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <h2>Streetwear That Speaks</h2>
+      <p>Fresh fits for the bold generation.</p>
+      <a href="shop.html" class="btn">Shop Now</a>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="categories">
+      <h2>Shop by Category</h2>
+
+      <div class="category-grid">
+        <a href="shop.html?category=Hoodies" class="category-card hoodies">
+          <span>Hoodies</span>
+        </a>
+
+        <a href="shop.html?category=T-shirts" class="category-card tshirts">
+          <span>T-Shirts</span>
+        </a>
+
+        <a href="shop.html?category=Sneakers" class="category-card sneakers">
+          <span>Sneakers</span>
+        </a>
+
+        <a href="shop.html?category=Accessories" class="category-card accessories">
+          <span>Accessories</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+
+
+  
+  <script type="module" src="../src/ui/navbar.js"></script>
+  <section class="featured">
+  <h2>Featured Drops</h2>
+  <div id="featured-products" class="grid" aria-busy="true" aria-live="polite">
+    <p class="loading-placeholder">Loading featured products…</p>
+  </div>
+</section>
+
+<script type="module" src="../src/ui/featured.js"></script>
+<script type="module" src="../src/ui/authState.js"></script>
+
+</body>
+<!-- FOOTER -->
+  <footer>
+    <p>© 2026 Urban Threads. All rights reserved.</p>
+  </footer>
+
+</html>
+

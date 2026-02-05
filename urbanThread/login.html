@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Threads</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="auth-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div class="auth-accent" aria-hidden="true"></div>
+
+  <main id="main-content" class="auth-panel card">
+    <h2>Login</h2>
+
+    <div id="auth-message" role="alert" aria-live="polite"></div>
+
+    <label for="email">Email
+      <input type="email" id="email" placeholder="Email" autocomplete="username" />
+    </label>
+
+    <label for="password">Password
+      <input type="password" id="password" placeholder="Password" autocomplete="current-password" />
+    </label>
+
+    <div class="auth-actions">
+      <button id="loginBtn">Login</button>
+    </div>
+
+    <p class="auth-link">
+      Don't have an account? <a href="signup.html">Sign up</a>
+    </p>
+  </main>
+
+  <script type="module" src="../src/ui/navbar.js"></script>
+  <script type="module" src="../src/ui/login.js"></script>
+  <script type="module" src="../src/ui/authState.js"></script>
+
+</body>
+</html>
